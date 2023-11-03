@@ -1,0 +1,24 @@
+  [1m[35m (69.0ms)[0m  [1m[35mCREATE DATABASE "wonderful_editor_development" ENCODING = 'unicode'[0m
+  [1m[35m (55.0ms)[0m  [1m[35mCREATE DATABASE "wonderful_editor_test" ENCODING = 'unicode'[0m
+Started GET "/mypage/new" for ::1 at 2023-11-03 16:45:35 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/mypage/new"):
+  
+Started GET "/mypage/new" for ::1 at 2023-11-03 16:45:39 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/mypage/new"):
+  
+Started GET "/" for ::1 at 2023-11-03 16:45:43 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.1.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.1.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.3ms | Allocations: 272)
+Completed 200 OK in 20ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 2715)
+
+
+Started GET "/" for ::1 at 2023-11-04 01:13:28 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.1.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.1.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.9ms | Allocations: 267)
+Completed 200 OK in 37ms (Views: 25.7ms | Allocations: 1093)
+
+
