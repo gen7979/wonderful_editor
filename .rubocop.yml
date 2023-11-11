@@ -9,3 +9,14 @@ inherit_from:
 AllCops:
   TargetRubyVersion: 2.7
   NewCops: enable
+
+#追加
+#expectを複数使用可能
+#とりあえず10個
+RSpec/MultipleExpectations:
+  Max: 10
+
+#追加
+#空のブロック作成を許可
+Lint/EmptyBlock:
+  Enabled: false

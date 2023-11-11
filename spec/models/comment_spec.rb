@@ -27,8 +27,8 @@ RSpec.describe Comment do
       user = User.create!(name: "foo", email: "foo@example.com", password: "abc123")
       article = Article.create!(title: "aaa", body: "bbb", user_id: user.id)
 
-      comment = Comment.new( body: "abcde", user_id: user.id, article_id: article.id)
-      expect(comment.valid?).to eq true
+      comment = Comment.new(body: "abcde", user_id: user.id, article_id: article.id)
+      expect(comment.valid?).to be true
     end
   end
 
@@ -37,8 +37,8 @@ RSpec.describe Comment do
       user = User.create!(name: "foo", email: "foo@example.com", password: "abc123")
       article = Article.create!(title: "aaa", body: "bbb", user_id: user.id)
 
-      comment = Comment.new( user_id: user.id, article_id: article.id)
-      expect(comment.invalid?).to eq true
+      comment = Comment.new(user_id: user.id, article_id: article.id)
+      expect(comment.invalid?).to be true
       expect(comment.errors.details[:body][0][:error]).to eq :blank
     end
   end
