@@ -31,6 +31,10 @@
 #  index_users_on_uid_and_provider      (uid,provider) UNIQUE
 #
 class User < ApplicationRecord
+  # validationの追加
+  validates :name, :email, :password, presence: true
+  validates :email, uniqueness: true
+
   extend Devise::Models # 追記
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

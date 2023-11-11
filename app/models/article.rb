@@ -18,6 +18,9 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Article < ApplicationRecord
+  # validationの追加
+  validates :title, :body, presence: true
+
   # users
   belongs_to :user
   # article_likes

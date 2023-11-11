@@ -20,6 +20,9 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Comment < ApplicationRecord
+  # validarionの追加
+  validates :body, presence: true
+
   belongs_to :user
   belongs_to :article
 end
