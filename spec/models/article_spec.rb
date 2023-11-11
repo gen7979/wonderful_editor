@@ -20,5 +20,20 @@
 require "rails_helper"
 
 RSpec.describe Article do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "title,bodyが両方揃っているとき" do
+    it "記事が作成される"do
+      user = User.create!(name: "foo", email: "foo@example.com", password: "abc123")
+      article = Article.new(title: "aaa", body: "bbb", user_id: user.id)
+      expect(article.valid?).to eq true
+    end
+  end
+
+  context "title,bodyのいずれかが存在しないとき"do
+    it "エラーが返る"do
+    user = User.create!(name: "foo", email: "foo@example.com", password: "abc123")
+    article = Article.new(title: "aaa", user_id: user.id)
+    expect(article.invalid?).to eq true
+    expect(article.errors.details[:body][0][:error]).to eq :blank
+    end
+  end
 end

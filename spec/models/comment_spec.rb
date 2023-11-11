@@ -22,5 +22,24 @@
 require "rails_helper"
 
 RSpec.describe Comment do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "bodyを入力したとき" do
+    it "コメントが作成される" do
+      user = User.create!(name: "foo", email: "foo@example.com", password: "abc123")
+      article = Article.create!(title: "aaa", body: "bbb", user_id: user.id)
+
+      comment = Comment.new( body: "abcde", user_id: user.id, article_id: article.id)
+      expect(comment.valid?).to eq true
+    end
+  end
+
+  context "bodyを入力していないとき" do
+    it "エラーが返る" do
+      user = User.create!(name: "foo", email: "foo@example.com", password: "abc123")
+      article = Article.create!(title: "aaa", body: "bbb", user_id: user.id)
+
+      comment = Comment.new( user_id: user.id, article_id: article.id)
+      expect(comment.invalid?).to eq true
+      expect(comment.errors.details[:body][0][:error]).to eq :blank
+    end
+  end
 end
