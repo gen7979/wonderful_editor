@@ -32,8 +32,7 @@
 #
 class User < ApplicationRecord
   # validationの追加
-  validates :name, :email, :password, presence: true
-  validates :email, uniqueness: true
+  validates :name, presence: true
 
   extend Devise::Models # 追記
   # Include default devise modules. Others available are:
