@@ -1298,3 +1298,15 @@ Started GET "/api/v1/users" for ::1 at 2023-11-18 22:22:13 +0900
   
 ActionController::RoutingError (No route matches [GET] "/api/v1/users"):
   
+Started GET "/api/v1/users" for ::1 at 2023-11-19 01:31:54 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users"):
+  
+Started GET "/api/v1/articles" for ::1 at 2023-11-19 01:32:00 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (3.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 228ms (Views: 221.1ms | ActiveRecord: 38.6ms | Allocations: 12096)
+
+
