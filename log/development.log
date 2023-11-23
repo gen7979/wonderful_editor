@@ -1310,3 +1310,337 @@ Processing by Api::V1::ArticlesController#index as HTML
 Completed 200 OK in 228ms (Views: 221.1ms | ActiveRecord: 38.6ms | Allocations: 12096)
 
 
+  [1m[36mArticle Load (4.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (5.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "aaa@aaa.aa"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "aaa@aaa.aa"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "aaa@aaa.aa"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (6.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["uid", "aaa@aaa.aa"], ["encrypted_password", "$2a$12$LFHAuP.oYC2K5AC9GOJi9OZtGDgXYGqlWxFBL/fDhbMp18NYk0frK"], ["name", "aaa"], ["email", "aaa@aaa.aa"], ["created_at", "2023-11-20 10:43:19.509242"], ["updated_at", "2023-11-20 10:43:19.509242"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (2.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "a"], ["body", "aaa"], ["user_id", 1], ["created_at", "2023-11-20 10:44:40.819319"], ["updated_at", "2023-11-20 10:44:40.819319"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Started GET "/api/v1/articles" for ::1 at 2023-11-20 19:56:19 +0900
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 4189)
+
+
+  
+Zeitwerk::NameError (expected file /Users/hattorigenshi/git/wonderful_editor/app/serializers/api/v1/article_serializer.rb to define constant Api::V1::ArticleSerializer, but didn't
+
+      raise Zeitwerk::NameError.new(msg, cref.last)
+      ^^^^^):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-20 19:57:24 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 5247)
+
+
+  
+NameError (undefined local variable or method `bynding' for #<Api::V1::ArticlesController:0x0000000000b248>
+
+    bynding.pry
+    ^^^^^^^
+Did you mean?  binding):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-20 19:57:26 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 3452)
+
+
+  
+NameError (undefined local variable or method `bynding' for #<Api::V1::ArticlesController:0x0000000000b608>
+
+    bynding.pry
+    ^^^^^^^
+Did you mean?  binding):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-20 19:57:52 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+Started GET "/api/v1/articles" for ::1 at 2023-11-20 19:57:54 +0900
+Completed 500 Internal Server Error in 39762ms (ActiveRecord: 0.0ms | Allocations: 342192)
+
+
+  
+Zeitwerk::NameError (expected file /Users/hattorigenshi/git/wonderful_editor/app/serializers/api/v1/article_serializer.rb to define constant Api::V1::ArticleSerializer, but didn't
+
+      raise Zeitwerk::NameError.new(msg, cref.last)
+      ^^^^^):
+  
+app/controllers/api/v1/articles_controller.rb:5:in `index'
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 500 Internal Server Error in 2245ms (ActiveRecord: 0.0ms | Allocations: 11784)
+
+
+  
+Zeitwerk::NameError (expected file /Users/hattorigenshi/git/wonderful_editor/app/serializers/api/v1/article_serializer.rb to define constant Api::V1::ArticleSerializer, but didn't
+
+      raise Zeitwerk::NameError.new(msg, cref.last)
+      ^^^^^):
+  
+app/controllers/api/v1/articles_controller.rb:5:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-20 19:58:49 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 500 Internal Server Error in 73480ms (ActiveRecord: 0.0ms | Allocations: 157366)
+
+
+  
+NameError (uninitialized constant Api::V1::ArticleSerializer
+
+    render json: @articles, serializer: Api::V1::ArticleSerializer
+                                               ^^^^^^^^^^^^^^^^^^^
+Did you mean?  Api::V1::ArticlesController):
+  
+app/controllers/api/v1/articles_controller.rb:5:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-20 20:01:47 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3133)
+
+
+  
+NoMethodError (undefined method `v1' for Api:Module):
+  
+app/serializers/api/v1/article_serializer.rb:1:in `<main>'
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-20 20:02:20 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (7.05ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 9726)
+
+
+  
+NoMethodError (undefined method `model_name' for ActiveRecord::Relation:Class
+
+          object.class.model_name.to_s.underscore
+                      ^^^^^^^^^^^
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-20 20:02:58 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (7.41ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 8606)
+
+
+  
+NoMethodError (undefined method `model_name' for ActiveRecord::Relation:Class
+
+          object.class.model_name.to_s.underscore
+                      ^^^^^^^^^^^
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-20 20:02:59 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (10.57ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 6576)
+
+
+  
+NoMethodError (undefined method `model_name' for ActiveRecord::Relation:Class
+
+          object.class.model_name.to_s.underscore
+                      ^^^^^^^^^^^
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-20 20:03:16 +0900
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ArticlesController#index as HTML
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (4.2ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms | Allocations: 11130)
+
+
+  
+NoMethodError (undefined method `model_name' for ActiveRecord::Relation:Class
+
+          object.class.model_name.to_s.underscore
+                      ^^^^^^^^^^^
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:12:22 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 500 Internal Server Error in 8ms (Allocations: 4530)
+
+
+  
+NameError (uninitialized constant Api::V1::ArticlesController::ArticleSerializer
+
+    render json: @articles, serializer: ArticleSerializer
+                                        ^^^^^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:13:04 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (5.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.26ms)
+Completed 200 OK in 246ms (Views: 242.7ms | ActiveRecord: 43.7ms | Allocations: 18570)
+
+
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:13:43 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 19ms (Views: 6.8ms | ActiveRecord: 10.3ms | Allocations: 9921)
+
+
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:16:54 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 31ms (Views: 7.8ms | ActiveRecord: 20.5ms | Allocations: 9924)
+
+
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:17:53 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 4486)
+
+
+  
+NameError (uninitialized constant Api::V1::ArticlesController::ArticleSerializer
+
+    render json: article, serializer: ArticleSerializer
+                                      ^^^^^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:21:07 +0900
+Processing by Api::V1::ArticlesController#index as */*
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2754)
+
+
+  
+NameError (uninitialized constant Api::V1::ArticlesController::ArticleSerializer
+
+    render json: article, serializer: ArticleSerializer
+                                      ^^^^^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:24:14 +0900
+Processing by Api::V1::ArticlesController#index as */*
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (3.72ms)
+Completed 500 Internal Server Error in 9ms (Allocations: 8599)
+
+
+  
+NoMethodError (undefined method `model_name' for ActiveRecord::Relation:Class
+
+          object.class.model_name.to_s.underscore
+                      ^^^^^^^^^^^
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:28:24 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (7.41ms)
+Completed 500 Internal Server Error in 12ms (Allocations: 6576)
+
+
+  
+NoMethodError (undefined method `model_name' for ActiveRecord::Relation:Class
+
+          object.class.model_name.to_s.underscore
+                      ^^^^^^^^^^^
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:29:25 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (3.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 163ms (Views: 159.7ms | ActiveRecord: 41.5ms | Allocations: 17763)
+
+
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:44:29 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (4.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 90ms (Views: 86.7ms | ActiveRecord: 31.0ms | Allocations: 15030)
+
+
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:44:37 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 4261)
+
+
+  
+NameError (uninitialized constant Api::V1::ArticlePreviewSerialize
+
+    render json: articles, each_serializer: Api::V1::ArticlePreviewSerialize
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  Api::V1::ArticlePreviewSerializer):
+  
+app/controllers/api/v1/articles_controller.rb:4:in `index'
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:44:42 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 27ms (Views: 6.3ms | ActiveRecord: 17.9ms | Allocations: 9640)
+
+
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:49:26 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (2.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."updated_at" DESC[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.6ms)
+Completed 200 OK in 32ms (Views: 6.0ms | ActiveRecord: 18.8ms | Allocations: 9069)
+
+
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (3.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "b"], ["body", "bbb"], ["user_id", 1], ["created_at", "2023-11-20 15:54:06.199492"], ["updated_at", "2023-11-20 15:54:06.199492"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:54:45 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (2.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."updated_at" DESC[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.06ms)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 2.9ms | Allocations: 2114)
+
+
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mArticle Load (4.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Update (2.7ms)[0m  [1m[33mUPDATE "articles" SET "title" = $1, "updated_at" = $2 WHERE "articles"."id" = $3[0m  [["title", "A"], ["updated_at", "2023-11-20 15:59:03.942281"], ["id", 1]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Started GET "/api/v1/articles" for ::1 at 2023-11-21 00:59:22 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (2.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."updated_at" DESC[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.7ms)
+Completed 200 OK in 15ms (Views: 5.8ms | ActiveRecord: 2.4ms | Allocations: 2083)
+
+
+Started GET "/api/v1/articles" for ::1 at 2023-11-22 21:11:21 +0900
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (2.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."updated_at" DESC[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 200 OK in 62ms (Views: 7.7ms | ActiveRecord: 26.6ms | Allocations: 11718)
+
+
