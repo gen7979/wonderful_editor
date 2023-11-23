@@ -16,7 +16,7 @@ RSpec.describe "Articles" do
       # binding.pry
       res = response.parsed_body
       expect(res.length).to eq 3
-      expect(res[0].keys).to eq ["title", "updated_at"]
+      expect(res[0].keys).to eq ["id", "title", "updated_at", "user"]
       expect(response).to have_http_status(:ok)
     end
   end
