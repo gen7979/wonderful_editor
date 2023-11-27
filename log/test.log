@@ -2524,3 +2524,59 @@ Processing by Api::V1::ArticlesController#show as HTML
   [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 100000000], ["LIMIT", 1]]
 Completed 404 Not Found in 2ms (ActiveRecord: 1.0ms | Allocations: 434)
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (5.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "charles@trantow.test"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (4.5ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["uid", "charles@trantow.test"], ["encrypted_password", "$2a$12$0l6J/rYueew6ohehVSofHOaKZbd9V1JA7zAJhY/2rqzHEOKWFSsYG"], ["name", "藤本 愛"], ["email", "charles@trantow.test"], ["created_at", "2023-11-27 13:51:12.409488"], ["updated_at", "2023-11-27 13:51:12.409488"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (2.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "一文字"], ["body", "警官しょうがっこうしえんするいじん。"], ["user_id", 156], ["created_at", "2023-11-27 13:51:12.418600"], ["updated_at", "2023-11-26 13:51:11.892667"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "stasia.ullrich@conn-altenwerth.test"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["uid", "stasia.ullrich@conn-altenwerth.test"], ["encrypted_password", "$2a$12$z88rnoKVNJmJ36yGMgdDTert3xGlRtAn44pUHZO9YjhlLgvP9EaOW"], ["name", "大塚 優菜"], ["email", "stasia.ullrich@conn-altenwerth.test"], ["created_at", "2023-11-27 13:51:12.687172"], ["updated_at", "2023-11-27 13:51:12.687172"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (1.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "機嫌"], ["body", "合う始まる天井宜しく。"], ["user_id", 157], ["created_at", "2023-11-27 13:51:12.689704"], ["updated_at", "2023-11-25 13:51:12.421940"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "toby@romaguera.test"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["uid", "toby@romaguera.test"], ["encrypted_password", "$2a$12$QNqUekJXUZRyfgn1vaH.Le7Ulk8nKLqo34n0BlSJ5c8AXtPPqOz9O"], ["name", "久保 優菜"], ["email", "toby@romaguera.test"], ["created_at", "2023-11-27 13:51:12.958275"], ["updated_at", "2023-11-27 13:51:12.958275"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (1.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "そあく"], ["body", "きいろ出版右利き店。"], ["user_id", 158], ["created_at", "2023-11-27 13:51:12.960605"], ["updated_at", "2023-11-27 13:51:12.960605"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/articles" for 127.0.0.1 at 2023-11-27 22:51:12 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."updated_at" DESC[0m
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 158], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 156], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 157], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.35ms)
+Completed 200 OK in 16ms (Views: 6.6ms | ActiveRecord: 4.8ms | Allocations: 6724)
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "sabina@deckow.example"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["uid", "sabina@deckow.example"], ["encrypted_password", "$2a$12$RlMmi6vai6kTJFdMZWsiSeA731LkEsp451wjof/IiBYRS/cMFjlGG"], ["name", "佐藤 大地"], ["email", "sabina@deckow.example"], ["created_at", "2023-11-27 13:51:13.295010"], ["updated_at", "2023-11-27 13:51:13.295010"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (1.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "いう"], ["body", "喜劇減俸じぶん傑作。"], ["user_id", 159], ["created_at", "2023-11-27 13:51:13.297330"], ["updated_at", "2023-11-27 13:51:13.297330"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/articles/125" for 127.0.0.1 at 2023-11-27 22:51:13 +0900
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"125"}
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 159], ["LIMIT", 1]]
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (1.79ms)
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 1.9ms | Allocations: 1515)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/api/v1/articles/100000000" for 127.0.0.1 at 2023-11-27 22:51:13 +0900
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"100000000"}
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 100000000], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.8ms | Allocations: 434)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m

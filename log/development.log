@@ -1659,3 +1659,15 @@ Completed 200 OK in 316ms (Views: 33.7ms | ActiveRecord: 64.9ms | Allocations: 3
   [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mArticle Load (2.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
   [1m[36mArticle Load (3.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Started GET "/api/v1/articles/1" for ::1 at 2023-11-27 22:50:45 +0900
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (2.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:8:in `show'
+[active_model_serializers]   [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:9:in `show'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (23.64ms)
+Completed 200 OK in 93ms (Views: 17.5ms | ActiveRecord: 34.6ms | Allocations: 27286)
+
+
