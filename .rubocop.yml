@@ -20,3 +20,8 @@ RSpec/MultipleExpectations:
 #空のブロック作成を許可
 Lint/EmptyBlock:
   Enabled: false
+
+#追加
+#IndexedLetのチェックを無効
+RSpec/IndexedLet:
+  Enabled: false
