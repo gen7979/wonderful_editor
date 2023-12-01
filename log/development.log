@@ -1671,3 +1671,1801 @@ Processing by Api::V1::ArticlesController#show as HTML
 Completed 200 OK in 93ms (Views: 17.5ms | ActiveRecord: 34.6ms | Allocations: 27286)
 
 
+Started GET "/api/v1/auth/sign_in" for ::1 at 2023-11-28 10:06:27 +0900
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 405 Method Not Allowed in 221ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 285950)
+
+
+Started GET "/api/v1/auth/sign_in" for ::1 at 2023-11-28 10:08:38 +0900
+Processing by DeviseTokenAuth::SessionsController#new as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.3ms)
+Completed 405 Method Not Allowed in 5ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 367)
+
+
+Started GET "/api/v1/auth/sign_up" for ::1 at 2023-11-28 10:09:00 +0900
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for DeviseTokenAuth::RegistrationsController
+Did you mean?  new_api_v1_user_session_url
+               new_api_v1_user_session_path
+               new_api_v1_user_password_url
+               new_api_v1_user_password_path):
+  
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.7.6) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auth/sign_up" for ::1 at 2023-11-28 10:10:06 +0900
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for DeviseTokenAuth::RegistrationsController
+Did you mean?  new_api_v1_user_session_url
+               new_api_v1_user_session_path
+               new_api_v1_user_password_url
+               new_api_v1_user_password_path):
+  
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.7.6) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auth/sign_up" for ::1 at 2023-11-28 23:35:19 +0900
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for DeviseTokenAuth::RegistrationsController
+Did you mean?  new_api_v1_user_session_url
+               new_api_v1_user_session_path
+               new_api_v1_user_password_url
+               new_api_v1_user_password_path):
+  
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.7.6) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auth/sign_in" for ::1 at 2023-11-28 23:35:24 +0900
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.38ms)
+Completed 405 Method Not Allowed in 30ms (Views: 5.4ms | Allocations: 345)
+
+
+Started GET "/api/v1/auth/sign_in" for ::1 at 2023-11-28 23:35:33 +0900
+Processing by DeviseTokenAuth::SessionsController#new as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Completed 405 Method Not Allowed in 3ms (Views: 1.3ms | Allocations: 247)
+
+
+Started GET "/api/v1/auth/sign_in" for ::1 at 2023-11-28 23:36:54 +0900
+Processing by DeviseTokenAuth::SessionsController#new as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.43ms)
+Completed 405 Method Not Allowed in 10ms (Views: 7.3ms | Allocations: 3951)
+
+
+Started POST "/api/v1/auth/articles" for ::1 at 2023-11-28 23:45:04 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/auth/articles"):
+  
+Started POST "/api/v1/articles" for ::1 at 2023-11-28 23:45:13 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 3ms (Allocations: 563)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-28 23:56:40 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (Allocations: 519)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-28 23:57:20 +0900
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 612)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/articles" for ::1 at 2023-11-28 23:58:30 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/base_api_controller.rb:4:in `current_user'
+  [1m[36mArticle Load (6.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."updated_at" DESC[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.16ms)
+Completed 200 OK in 5933ms (Views: 5860.2ms | ActiveRecord: 55.0ms | Allocations: 40985)
+
+
+Started GET "/api/v1/articles" for ::1 at 2023-11-28 23:59:20 +0900
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/base_api_controller.rb:4:in `current_user'
+  [1m[36mArticle Load (4.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."updated_at" DESC[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.18ms)
+Completed 200 OK in 8955ms (Views: 8931.3ms | ActiveRecord: 16.6ms | Allocations: 19945)
+
+
+Started GET "/api/v1/article/1" for ::1 at 2023-11-28 23:59:47 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/article/1"):
+  
+Started GET "/api/v1/article/:1" for ::1 at 2023-11-28 23:59:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/article/:1"):
+  
+Started GET "/api/v1/article/1" for ::1 at 2023-11-28 23:59:58 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/article/1"):
+  
+Started GET "/api/v1/article/1" for ::1 at 2023-11-29 00:00:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/article/1"):
+  
+Started GET "/api/v1/articles/1" for ::1 at 2023-11-29 00:01:31 +0900
+Processing by Api::V1::ArticlesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (11.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:8:in `show'
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/base_api_controller.rb:4:in `current_user'
+[active_model_serializers]   [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:9:in `show'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (6.47ms)
+Completed 200 OK in 7603ms (Views: 7501.6ms | ActiveRecord: 18.8ms | Allocations: 21259)
+
+
+Started GET "/api/v1/articles/1" for ::1 at 2023-11-29 00:02:09 +0900
+Processing by Api::V1::ArticlesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (4.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:8:in `show'
+  [1m[36mArticle Load (3.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (pry):1:in `current_user'
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (pry):3:in `current_user'
+  [1m[36mCACHE Article Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (pry):5:in `current_user'
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (pry):6:in `current_user'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:9:in `show'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (7.0ms)
+Completed 200 OK in 147496ms (Views: 147464.5ms | ActiveRecord: 20.6ms | Allocations: 284427)
+
+
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 00:05:02 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.0ms | Allocations: 452)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 00:05:05 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 428)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 00:05:06 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 428)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 00:05:06 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 428)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 00:05:40 +0900
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 618)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 00:09:10 +0900
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 618)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 00:09:47 +0900
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3383)
+
+
+  
+NoMethodError (undefined method `flash=' for #<ActionDispatch::Request POST "http://localhost:3000/api/v1/articles" for ::1>
+
+          request.flash = nil
+                 ^^^^^^^^):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:167:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 00:09:54 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 2934)
+
+
+  
+NoMethodError (undefined method `flash=' for #<ActionDispatch::Request POST "http://localhost:3000/api/v1/articles" for ::1>
+
+          request.flash = nil
+                 ^^^^^^^^):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:167:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 00:09:55 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 2886)
+
+
+  
+NoMethodError (undefined method `flash=' for #<ActionDispatch::Request POST "http://localhost:3000/api/v1/articles" for ::1>
+
+          request.flash = nil
+                 ^^^^^^^^):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:167:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 00:09:56 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 2886)
+
+
+  
+NoMethodError (undefined method `flash=' for #<ActionDispatch::Request POST "http://localhost:3000/api/v1/articles" for ::1>
+
+          request.flash = nil
+                 ^^^^^^^^):
+  
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:167:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.9.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.7.6) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 00:11:00 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Completed 400 Bad Request in 12892ms (ActiveRecord: 0.0ms | Allocations: 25194)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: article
+Did you mean?  controller
+               action):
+  
+app/controllers/api/v1/articles_controller.rb:15:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 01:54:22 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Completed 400 Bad Request in 51205ms (Allocations: 68232)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: article
+Did you mean?  controller
+               action):
+  
+app/controllers/api/v1/articles_controller.rb:15:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 01:56:25 +0900
+Processing by Api::V1::ArticlesController#create as */*
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 02:17:25 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+Completed 400 Bad Request in 24183ms (Allocations: 89474)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: article
+Did you mean?  title
+               controller
+               action
+               body):
+  
+app/controllers/api/v1/articles_controller.rb:15:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 02:23:08 +0900
+Completed 400 Bad Request in 1616986ms (Allocations: 5335433)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: article
+Did you mean?  controller
+               action):
+  
+app/controllers/api/v1/articles_controller.rb:15:in `create'
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+Completed 400 Bad Request in 203147ms (Allocations: 10408203)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: article
+Did you mean?  title
+               controller
+               action
+               body):
+  
+app/controllers/api/v1/articles_controller.rb:15:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 02:26:55 +0900
+  
+SyntaxError (/Users/hattorigenshi/git/wonderful_editor/app/controllers/api/v1/articles_controller.rb:15: syntax error, unexpected local variable or method, expecting ')'
+      body: params[:body]
+      ^~~~
+/Users/hattorigenshi/git/wonderful_editor/app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected ')', expecting `end'
+    )
+    ^
+):
+  
+app/controllers/api/v1/articles_controller.rb:15: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected ')', expecting `end'
+app/controllers/api/v1/articles_controller.rb:15: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected ')', expecting `end'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 02:27:33 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 39.8ms | Allocations: 18489)
+
+
+  
+NameError (undefined local variable or method `bidning' for #<Api::V1::ArticlesController:0x00000000010950>
+
+    bidning.pry
+    ^^^^^^^
+Did you mean?  binding):
+  
+app/controllers/api/v1/articles_controller.rb:18:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 02:27:58 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+Completed 422 Unprocessable Entity in 46951ms (ActiveRecord: 13.7ms | Allocations: 366213)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/api/v1/articles_controller.rb:20:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 02:29:25 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/base_api_controller.rb:4:in `current_user'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):16:in `create'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (pry):16:in `create'
+  [1m[36mArticle Create (9.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "xxx"], ["body", "xxx"], ["user_id", 1], ["created_at", "2023-11-28 17:30:06.050253"], ["updated_at", "2023-11-28 17:30:06.050253"]]
+  ↳ (pry):16:in `create'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ (pry):16:in `create'
+Completed 500 Internal Server Error in 42822ms (ActiveRecord: 60.0ms | Allocations: 97718)
+
+
+  
+ActionView::MissingTemplate (Missing template api/v1/articles/show, api/v1/base_api/show, application/show with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/hattorigenshi/git/wonderful_editor/app/views"
+  * "/Users/hattorigenshi/git/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/devise_token_auth-1.2.2/app/views"
+  * "/Users/hattorigenshi/git/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/devise-4.9.3/app/views"
+  * "/Users/hattorigenshi/git/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/actiontext-6.1.7.6/app/views"
+  * "/Users/hattorigenshi/git/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/actionmailbox-6.1.7.6/app/views"
+):
+  
+app/controllers/api/v1/articles_controller.rb:23:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 02:30:46 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/base_api_controller.rb:4:in `current_user'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mArticle Create (3.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "xxx"], ["body", "xxx"], ["user_id", 1], ["created_at", "2023-11-28 17:30:51.007406"], ["updated_at", "2023-11-28 17:30:51.007406"]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 1999ms (ActiveRecord: 40.9ms | Allocations: 42853)
+
+
+  
+NameError (undefined local variable or method `json' for #<Api::V1::ArticlesController:0x000000000154a0>
+
+    render json:
+           ^^^^^
+Did you mean?  JSON):
+  
+app/controllers/api/v1/articles_controller.rb:23:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 02:31:12 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/base_api_controller.rb:4:in `current_user'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mArticle Create (3.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "xxx"], ["body", "xxx"], ["user_id", 1], ["created_at", "2023-11-28 17:31:17.178078"], ["updated_at", "2023-11-28 17:31:17.178078"]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (1.76ms)
+Completed 200 OK in 12485ms (Views: 10488.3ms | ActiveRecord: 39.4ms | Allocations: 67158)
+
+
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:51:41 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/base_api_controller.rb:4:in `current_user'
+[active_model_serializers]   [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ (pry):18:in `create'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (18.37ms)
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mArticle Create (10.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "xxx"], ["body", "xxx"], ["user_id", 1], ["created_at", "2023-11-29 14:52:34.653824"], ["updated_at", "2023-11-29 14:52:34.653824"]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 52813ms (Views: 21.5ms | ActiveRecord: 76.8ms | Allocations: 112302)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/articles_controller.rb:23:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:52:41 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/base_api_controller.rb:4:in `current_user'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mArticle Create (5.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "xxx"], ["body", "xxx"], ["user_id", 1], ["created_at", "2023-11-29 14:52:45.617241"], ["updated_at", "2023-11-29 14:52:45.617241"]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (3.48ms)
+Completed 200 OK in 6502ms (Views: 1894.1ms | ActiveRecord: 17.9ms | Allocations: 31472)
+
+
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:53:22 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2891)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+      user_id: @current_user.id
+                            ^^^):
+  
+app/controllers/api/v1/articles_controller.rb:16:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:53:53 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1291)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+      user_id: @current_user.id
+                            ^^^):
+  
+app/controllers/api/v1/articles_controller.rb:16:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:54:01 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1276)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+      user_id: @current_user.id
+                            ^^^):
+  
+app/controllers/api/v1/articles_controller.rb:16:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:54:06 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1276)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+      user_id: @current_user.id
+                            ^^^):
+  
+app/controllers/api/v1/articles_controller.rb:16:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:54:07 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1276)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+      user_id: @current_user.id
+                            ^^^):
+  
+app/controllers/api/v1/articles_controller.rb:16:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:54:37 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (pry):19:in `current_user'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mArticle Create (3.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "xxx"], ["body", "xxx"], ["user_id", 1], ["created_at", "2023-11-29 14:56:01.794380"], ["updated_at", "2023-11-29 14:56:01.794380"]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (1.25ms)
+Completed 200 OK in 92350ms (Views: 13248.4ms | ActiveRecord: 65.0ms | Allocations: 450394)
+
+
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:56:23 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2888)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+      user_id: @current_user.id
+                            ^^^):
+  
+app/controllers/api/v1/articles_controller.rb:16:in `create'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:57:43 +0900
+  
+SyntaxError (/Users/hattorigenshi/git/wonderful_editor/app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+      binding.pry
+                 ^
+/Users/hattorigenshi/git/wonderful_editor/app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+    )
+    ^
+):
+  
+app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:57:45 +0900
+  
+SyntaxError (/Users/hattorigenshi/git/wonderful_editor/app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+      binding.pry
+                 ^
+/Users/hattorigenshi/git/wonderful_editor/app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+    )
+    ^
+):
+  
+app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:57:46 +0900
+  
+SyntaxError (/Users/hattorigenshi/git/wonderful_editor/app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+      binding.pry
+                 ^
+/Users/hattorigenshi/git/wonderful_editor/app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+    )
+    ^
+):
+  
+app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:57:47 +0900
+  
+SyntaxError (/Users/hattorigenshi/git/wonderful_editor/app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+      binding.pry
+                 ^
+/Users/hattorigenshi/git/wonderful_editor/app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+    )
+    ^
+):
+  
+app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+app/controllers/api/v1/articles_controller.rb:16: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/articles_controller.rb:19: syntax error, unexpected ')', expecting `end'
+Started POST "/api/v1/articles" for ::1 at 2023-11-29 23:59:05 +0900
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/base_api_controller.rb:4:in `current_user'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mArticle Create (3.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "xxx"], ["body", "xxx"], ["user_id", 1], ["created_at", "2023-11-29 14:59:16.424899"], ["updated_at", "2023-11-29 14:59:16.424899"]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (1.79ms)
+Completed 200 OK in 24225ms (Views: 16537.7ms | ActiveRecord: 44.9ms | Allocations: 71669)
+
+
+Started POST "/api/v1/articles" for ::1 at 2023-11-30 21:44:04 +0900
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"xxx", "body"=>"xxx"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/base_api_controller.rb:4:in `current_user'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mArticle Create (11.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "xxx"], ["body", "xxx"], ["user_id", 1], ["created_at", "2023-11-30 12:45:34.240690"], ["updated_at", "2023-11-30 12:45:34.240690"]]
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:21:in `create'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (2.14ms)
+Completed 200 OK in 92141ms (Views: 2161.9ms | ActiveRecord: 82.0ms | Allocations: 184817)
+
+
