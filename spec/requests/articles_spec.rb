@@ -68,11 +68,25 @@ RSpec.describe "Articles" do
     end
   end
 
-  # # update
-  # describe "PATCH /api/v1/articles/:id" do
-  #   it "任意の記事を更新できる" do
-  #   end
-  # end
+  # update
+  describe "PATCH /api/v1/articles/:id" do
+    subject { patch api_v1_article_path(article_id, params: params) }
+
+    let(:params) do
+      { article: { title: "ABC", created_at: 1.day.ago } }
+    end
+    let(:article_id) { article.id }
+    let(:article) { create(:article) }
+    let(:current_user) { create(:user) }
+
+    before { allow_any_instance_of(Api::V1::BaseApiController).to receive(:current_user).and_return(current_user) }
+
+    it "正しいパラメータが送信された場合、任意の記事を更新できる" do
+      expect { subject }.to change { article.reload.title }.from(article.title).to(params[:article][:title]) &
+                            not_change { article.reload.body } &
+                            not_change { article.reload.created_at }
+    end
+  end
 
   # # DELETE
   # describe "DELETE /api/v1/articles/:id" do

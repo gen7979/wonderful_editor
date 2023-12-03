@@ -4966,3 +4966,23 @@ Completed 422 Unprocessable Entity in 4622ms (ActiveRecord: 31.3ms | Allocations
 ActiveRecord::RecordInvalid (Validation failed: Title can't be blank, Body can't be blank):
   
 app/controllers/api/v1/articles_controller.rb:15:in `create'
+Started PATCH "/api/v1/articles/9" for ::1 at 2023-12-02 20:04:07 +0900
+Processing by Api::V1::ArticlesController#update as */*
+  Parameters: {"article"=>{"title"=>"ABCDE", "body"=>"abcde"}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mArticle Load (8.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:19:in `update'
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:19:in `update'
+  [1m[36mArticle Update (3.6ms)[0m  [1m[33mUPDATE "articles" SET "title" = $1, "body" = $2, "updated_at" = $3 WHERE "articles"."id" = $4[0m  [["title", "ABCDE"], ["body", "abcde"], ["updated_at", "2023-12-02 11:04:07.647636"], ["id", 9]]
+  ↳ app/controllers/api/v1/articles_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:19:in `update'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/base_api_controller.rb:3:in `current_user'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (2.22ms)
+Completed 200 OK in 162ms (Views: 6.5ms | ActiveRecord: 45.5ms | Allocations: 30654)
+
+
