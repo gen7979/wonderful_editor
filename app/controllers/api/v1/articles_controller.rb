@@ -17,7 +17,13 @@ class Api::V1::ArticlesController < Api::V1::BaseApiController
   def update
     @article = Article.find(params[:id])
     @article.update!(article_params)
-    render json: @article, selializer: Api::V1::ArticleSerializer
+    render json: @article, serializer: Api::V1::ArticleSerializer
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy!
+    render json: @article, serializer: Api::V1::ArticleSerializer
   end
 
   private
