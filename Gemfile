@@ -29,7 +29,7 @@ gem "jbuilder", "~> 2.7"
 gem "active_model_serializers", "~> 0.10.0"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "devise_token_auth"
-gem 'rack-cors'
+gem "rack-cors"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

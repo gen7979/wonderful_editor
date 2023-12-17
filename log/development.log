@@ -6124,3 +6124,32 @@ Can't verify CSRF token authenticity.
 Completed 200 OK in 461ms (Views: 0.4ms | ActiveRecord: 17.7ms | Allocations: 17981)
 
 
+Started POST "/api/v1/auth/sign_in" for ::1 at 2023-12-17 19:47:49 +0900
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.jp", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test@test.jp"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[37mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"9-u_HlNy7O5xJ_1s9HCvQQ\\\":{\\\"token\\\":\\\"$2a$10$XBjOBsDsmxNLysmK.WunnORdSqZIXhLDKkdAKvKVcslavFHmCGOoK\\\",\\\"expiry\\\":1703767870,\\\"previous_token\\\":\\\"$2a$10$PXh75aFKwbT/Eewl5Uauz..nk0tXCQsTpVPr2H62ej3CoQOJuCuHq\\\",\\\"updated_at\\\":\\\"2023-12-14T12:51:10Z\\\"},\\\"TdCgOt_rSl2Xhd6RCps6sA\\\":{\\\"token\\\":\\\"$2a$10$uCeWSOOu8aysYU8504kRCOOPGbp/WN8jHzBY2Ch2D7jIQC7QSduxm\\\",\\\"expiry\\\":1703767917,\\\"previous_token\\\":\\\"$2a$10$VuhroC8KFYT3peozAAcSJ.x6870i5hKSd2ryC1c6I8fx8kpowkCRi\\\",\\\"updated_at\\\":\\\"2023-12-14T12:51:57Z\\\"},\\\"_SsczwcmqLyXdGRhYfcTiw\\\":{\\\"token\\\":\\\"$2a$10$wguYNiWWbJ0dZb83f62.N.wCBIu6iequfPUgf.4ok5oAI16fHiORy\\\",\\\"expiry\\\":1703768082,\\\"previous_token\\\":\\\"$2a$10$OpxBcWWZQJMPiZGktSYIlujk6aWqMJqhJ7C/5VMKkCmfSP2JSNj3.\\\",\\\"updated_at\\\":\\\"2023-12-14T12:54:42Z\\\"},\\\"55jJeaC8EJS-JmDuJTEn9A\\\":{\\\"token\\\":\\\"$2a$10$rGBUJiypy4x1rbjr6q3uduEcB3D7JGqNXG9JAQt1LlaDOTBHta6iq\\\",\\\"expiry\\\":1704019670}}\""], ["updated_at", "2023-12-17 10:47:50.075165"], ["id", 2]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 412ms (Views: 1.8ms | ActiveRecord: 23.6ms | Allocations: 30850)
+
+
+Started POST "/api/v1/auth/sign_in" for ::1 at 2023-12-18 01:26:09 +0900
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.jp", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test@test.jp"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.3ms)[0m  [1m[37mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"9-u_HlNy7O5xJ_1s9HCvQQ\\\":{\\\"token\\\":\\\"$2a$10$XBjOBsDsmxNLysmK.WunnORdSqZIXhLDKkdAKvKVcslavFHmCGOoK\\\",\\\"expiry\\\":1703767870,\\\"previous_token\\\":\\\"$2a$10$PXh75aFKwbT/Eewl5Uauz..nk0tXCQsTpVPr2H62ej3CoQOJuCuHq\\\",\\\"updated_at\\\":\\\"2023-12-14T12:51:10Z\\\"},\\\"TdCgOt_rSl2Xhd6RCps6sA\\\":{\\\"token\\\":\\\"$2a$10$uCeWSOOu8aysYU8504kRCOOPGbp/WN8jHzBY2Ch2D7jIQC7QSduxm\\\",\\\"expiry\\\":1703767917,\\\"previous_token\\\":\\\"$2a$10$VuhroC8KFYT3peozAAcSJ.x6870i5hKSd2ryC1c6I8fx8kpowkCRi\\\",\\\"updated_at\\\":\\\"2023-12-14T12:51:57Z\\\"},\\\"_SsczwcmqLyXdGRhYfcTiw\\\":{\\\"token\\\":\\\"$2a$10$wguYNiWWbJ0dZb83f62.N.wCBIu6iequfPUgf.4ok5oAI16fHiORy\\\",\\\"expiry\\\":1703768082,\\\"previous_token\\\":\\\"$2a$10$OpxBcWWZQJMPiZGktSYIlujk6aWqMJqhJ7C/5VMKkCmfSP2JSNj3.\\\",\\\"updated_at\\\":\\\"2023-12-14T12:54:42Z\\\"},\\\"55jJeaC8EJS-JmDuJTEn9A\\\":{\\\"token\\\":\\\"$2a$10$rGBUJiypy4x1rbjr6q3uduEcB3D7JGqNXG9JAQt1LlaDOTBHta6iq\\\",\\\"expiry\\\":1704019670},\\\"gDYoMdwJ9pv59ygRiCcGGA\\\":{\\\"token\\\":\\\"$2a$10$6NaBAWGAaRgHf77Vzb2deOdsbW9CtJuO3npsTxzquUj8G1xSi/3Yy\\\",\\\"expiry\\\":1704039970}}\""], ["updated_at", "2023-12-17 16:26:10.043201"], ["id", 2]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 426ms (Views: 1.2ms | ActiveRecord: 30.3ms | Allocations: 32614)
+
+
