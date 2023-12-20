@@ -1,4 +1,6 @@
-class Api::V1::ArticlesController < ApplicationController
+class Api::V1::ArticlesController < Api::V1::BaseApiController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     articles = Article.order(updated_at: :desc)
     render json: articles, each_serializer: Api::V1::ArticlePreviewSerializer
@@ -8,4 +10,27 @@ class Api::V1::ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     render json: @article, serializer: Api::V1::ArticleSerializer
   end
+
+  def create
+    article = current_user.articles.create!(article_params)
+    render json: article, serializer: Api::V1::ArticleSerializer
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    @article.update!(article_params)
+    render json: @article, serializer: Api::V1::ArticleSerializer
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy!
+    render json: @article, serializer: Api::V1::ArticleSerializer
+  end
+
+  private
+
+    def article_params
+      params.require(:article).permit(:title, :body)
+    end
 end
