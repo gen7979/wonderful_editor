@@ -7170,3 +7170,267 @@ Migrating to AddStatusToArticles (20231230051709)
   [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."status" = $1[0m  [["status", 1]]
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."status" = $1[0m  [["status", 1]]
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."status" = $1[0m  [["status", 0]]
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."status" = $1 ORDER BY "articles"."updated_at" DESC[0m  [["status", 0]]
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."status" = $1[0m  [["status", 1]]
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."status" = $1 ORDER BY "articles"."updated_at" DESC[0m  [["status", 1]]
+Started GET "/" for ::1 at 2023-12-30 17:39:31 +0900
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 72e7ba9a23e45af41557
+Version: webpack 4.43.0
+Time: 165ms
+Built at: 2023/12/30 17:39:33
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d8c2d21c9ae7c9416bbd.js   4.25 KiB  application  [emitted] [immutable]  application
+js/application-d8c2d21c9ae7c9416bbd.js.map   3.53 KiB  application  [emitted] [dev]        application
+      js/hello_vue-221418b10536e7e147bc.js   4.24 KiB    hello_vue  [emitted] [immutable]  hello_vue
+  js/hello_vue-221418b10536e7e147bc.js.map   3.52 KiB    hello_vue  [emitted] [dev]        hello_vue
+                             manifest.json  689 bytes               [emitted]              
+Entrypoint application = js/application-d8c2d21c9ae7c9416bbd.js js/application-d8c2d21c9ae7c9416bbd.js.map
+Entrypoint hello_vue = js/hello_vue-221418b10536e7e147bc.js js/hello_vue-221418b10536e7e147bc.js.map
+[./app/javascript/packs/application.js] 361 bytes {application} [built] [failed] [1 error]
+[./app/javascript/packs/hello_vue.js] 361 bytes {hello_vue} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+TypeError: this.getOptions is not a function
+    at Object.loader (/Users/hattorigenshi/git/wonderful_editor/node_modules/babel-loader/lib/index.js:44:28)
+    at Object.<anonymous> (/Users/hattorigenshi/git/wonderful_editor/node_modules/babel-loader/lib/index.js:39:12)
+
+ERROR in ./app/javascript/packs/hello_vue.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+TypeError: this.getOptions is not a function
+    at Object.loader (/Users/hattorigenshi/git/wonderful_editor/node_modules/babel-loader/lib/index.js:44:28)
+    at Object.<anonymous> (/Users/hattorigenshi/git/wonderful_editor/node_modules/babel-loader/lib/index.js:39:12)
+
+
+warning ../../package.json: No license field
+(node:62208) UnhandledPromiseRejectionWarning: TypeError [ERR_VM_DYNAMIC_IMPORT_CALLBACK_MISSING]: A dynamic import callback was not specified.
+    at new NodeError (internal/errors.js:322:7)
+    at exports.importModuleDynamicallyCallback (internal/process/esm_loader.js:34:9)
+    at Object.<anonymous> (/Users/hattorigenshi/git/wonderful_editor/node_modules/babel-loader/lib/cache.js:22:23)
+    at Module._compile (/Users/hattorigenshi/git/wonderful_editor/node_modules/v8-compile-cache/v8-compile-cache.js:194:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1143:10)
+    at Module.load (internal/modules/cjs/loader.js:979:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:819:12)
+    at Module.require (internal/modules/cjs/loader.js:1003:19)
+    at require (/Users/hattorigenshi/git/wonderful_editor/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at Object.<anonymous> (/Users/hattorigenshi/git/wonderful_editor/node_modules/babel-loader/lib/index.js:19:15)
+    at Module._compile (/Users/hattorigenshi/git/wonderful_editor/node_modules/v8-compile-cache/v8-compile-cache.js:194:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1143:10)
+    at Module.load (internal/modules/cjs/loader.js:979:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:819:12)
+    at Module.require (internal/modules/cjs/loader.js:1003:19)
+    at require (/Users/hattorigenshi/git/wonderful_editor/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at loadLoader (/Users/hattorigenshi/git/wonderful_editor/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/Users/hattorigenshi/git/wonderful_editor/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/Users/hattorigenshi/git/wonderful_editor/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/Users/hattorigenshi/git/wonderful_editor/node_modules/webpack/lib/NormalModule.js:295:3)
+    at NormalModule.build (/Users/hattorigenshi/git/wonderful_editor/node_modules/webpack/lib/NormalModule.js:446:15)
+    at Compilation.buildModule (/Users/hattorigenshi/git/wonderful_editor/node_modules/webpack/lib/Compilation.js:739:10)
+    at /Users/hattorigenshi/git/wonderful_editor/node_modules/webpack/lib/Compilation.js:1111:12
+    at /Users/hattorigenshi/git/wonderful_editor/node_modules/webpack/lib/NormalModuleFactory.js:409:6
+    at /Users/hattorigenshi/git/wonderful_editor/node_modules/webpack/lib/NormalModuleFactory.js:155:13
+    at eval (eval at create (/Users/hattorigenshi/git/wonderful_editor/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:14:1)
+    at /Users/hattorigenshi/git/wonderful_editor/node_modules/case-sensitive-paths-webpack-plugin/index.js:158:9
+    at /Users/hattorigenshi/git/wonderful_editor/node_modules/case-sensitive-paths-webpack-plugin/index.js:113:7
+    at /Users/hattorigenshi/git/wonderful_editor/node_modules/case-sensitive-paths-webpack-plugin/index.js:113:7
+    at /Users/hattorigenshi/git/wonderful_editor/node_modules/case-sensitive-paths-webpack-plugin/index.js:113:7
+    at /Users/hattorigenshi/git/wonderful_editor/node_modules/case-sensitive-paths-webpack-plugin/index.js:113:7
+    at CaseSensitivePathsPlugin.fileExistsWithCase (/Users/hattorigenshi/git/wonderful_editor/node_modules/case-sensitive-paths-webpack-plugin/index.js:83:5)
+    at /Users/hattorigenshi/git/wonderful_editor/node_modules/case-sensitive-paths-webpack-plugin/index.js:106:10
+    at CaseSensitivePathsPlugin.getFilenamesInDir (/Users/hattorigenshi/git/wonderful_editor/node_modules/case-sensitive-paths-webpack-plugin/index.js:51:5)
+    at CaseSensitivePathsPlugin.fileExistsWithCase (/Users/hattorigenshi/git/wonderful_editor/node_modules/case-sensitive-paths-webpack-plugin/index.js:89:8)
+    at /Users/hattorigenshi/git/wonderful_editor/node_modules/case-sensitive-paths-webpack-plugin/index.js:106:10
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:62208) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:62208) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+  Rendered home/index.html.erb within layouts/application (Duration: 2062.3ms | Allocations: 3563)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2072.3ms | Allocations: 9105)
+Completed 200 OK in 2107ms (Views: 2096.6ms | ActiveRecord: 0.0ms | Allocations: 12648)
+
+
+Started GET "/api/v1/articles" for ::1 at 2023-12-30 17:39:46 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (6.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."status" = $1 ORDER BY "articles"."updated_at" DESC[0m  [["status", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 50ms (Views: 11.6ms | ActiveRecord: 15.6ms | Allocations: 10291)
+
+
+Started GET "/api/v1/article/9" for ::1 at 2023-12-30 17:50:24 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/article/9"):
+  
+Started GET "/api/v1/articles/9" for ::1 at 2023-12-30 17:51:16 +0900
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (2.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 AND "articles"."status" = $2 LIMIT $3[0m  [["id", 9], ["status", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:10:in `show'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (4.37ms)
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 28.5ms | Allocations: 19752)
+
+
+  
+NoMethodError (undefined method `model_name' for NilClass:Class
+
+          object.class.model_name.to_s.underscore
+                      ^^^^^^^^^^^
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/articles_controller.rb:11:in `show'
+Started GET "/api/v1/articles/9" for ::1 at 2023-12-30 18:38:34 +0900
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (2.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 AND "articles"."status" = $2 LIMIT $3[0m  [["id", 9], ["status", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:10:in `show'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (6.71ms)
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 31.0ms | Allocations: 16120)
+
+
+  
+NoMethodError (undefined method `model_name' for NilClass:Class
+
+          object.class.model_name.to_s.underscore
+                      ^^^^^^^^^^^
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/articles_controller.rb:11:in `show'
+Started GET "/api/v1/articles/9" for ::1 at 2023-12-30 18:40:15 +0900
+Processing by Api::V1::ArticlesController#show as */*
+  Parameters: {"email"=>"test@test.jp", "password"=>"[FILTERED]", "id"=>"9"}
+  [1m[36mArticle Load (2.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 AND "articles"."status" = $2 LIMIT $3[0m  [["id", 9], ["status", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:10:in `show'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (4.05ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.4ms | Allocations: 8230)
+
+
+  
+NoMethodError (undefined method `model_name' for NilClass:Class
+
+          object.class.model_name.to_s.underscore
+                      ^^^^^^^^^^^
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/articles_controller.rb:11:in `show'
+Started GET "/api/v1/articles/9" for ::1 at 2023-12-30 18:42:43 +0900
+Processing by Api::V1::ArticlesController#show as */*
+  Parameters: {"email"=>"test@test.jp", "password"=>"[FILTERED]", "id"=>"9"}
+  [1m[36mArticle Load (4.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 AND "articles"."status" = $2 LIMIT $3[0m  [["id", 9], ["status", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:10:in `show'
+[active_model_serializers] Rendered Api::V1::ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (11.73ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.4ms | Allocations: 8019)
+
+
+  
+NoMethodError (undefined method `model_name' for NilClass:Class
+
+          object.class.model_name.to_s.underscore
+                      ^^^^^^^^^^^
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/articles_controller.rb:11:in `show'
+Started GET "/api/v1/articles/9" for ::1 at 2023-12-30 18:45:09 +0900
+Processing by Api::V1::ArticlesController#show as */*
+  Parameters: {"email"=>"test@test.jp", "password"=>"[FILTERED]", "id"=>"9"}
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 AND "articles"."status" = $2 LIMIT $3[0m  [["id", 9], ["status", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:10:in `show'
+Completed 404 Not Found in 14ms (ActiveRecord: 8.3ms | Allocations: 5889)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article):
+  
+app/controllers/api/v1/articles_controller.rb:10:in `show'
+Started PATCH "/api/v1/articles/6?status=1" for ::1 at 2023-12-30 18:46:21 +0900
+Processing by Api::V1::ArticlesController#update as */*
+  Parameters: {"email"=>"test@test.jp", "password"=>"[FILTERED]", "status"=>"1", "id"=>"6"}
+Can't verify CSRF token authenticity.
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 217ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 285391)
+
+
+Started GET "/api/v1/articles" for ::1 at 2023-12-30 18:46:45 +0900
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (3.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."status" = $1 ORDER BY "articles"."updated_at" DESC[0m  [["status", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 25ms (Views: 5.5ms | ActiveRecord: 6.3ms | Allocations: 6012)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-12-30 18:46:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_up"):
+  
+Started GET "/sign_up" for ::1 at 2023-12-30 18:47:08 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 5889)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 6761)
+
+
+Started GET "/sign_up" for ::1 at 2023-12-31 00:47:44 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2253)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 5625)
+Completed 200 OK in 22ms (Views: 20.1ms | Allocations: 6089)
+
+
+Started GET "/" for ::1 at 2023-12-31 00:47:53 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 2253)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 5625)
+Completed 200 OK in 25ms (Views: 23.7ms | Allocations: 6033)
+
+
+Started GET "/aaa" for ::1 at 2023-12-31 00:47:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/aaa"):
+  
+Started GET "/sign_up" for ::1 at 2023-12-31 00:48:27 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb within layouts/application (Duration: 26.9ms | Allocations: 2253)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.3ms | Allocations: 5633)
+Completed 200 OK in 40ms (Views: 38.9ms | Allocations: 6047)
+
+
+Started PATCH "/sign_in" for ::1 at 2023-12-31 00:48:54 +0900
+  
+ActionController::RoutingError (No route matches [PATCH] "/sign_in"):
+  
+Started GET "/sign_in" for ::1 at 2023-12-31 00:49:07 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 5626)
+Completed 200 OK in 27ms (Views: 26.4ms | Allocations: 6046)
+
+

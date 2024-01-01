@@ -30,5 +30,4 @@ class Article < ApplicationRecord
   has_many :comments, dependent: :destroy
   # 公開非公開の設定
   enum status: { draft: 0, published: 1 }
-
 end
