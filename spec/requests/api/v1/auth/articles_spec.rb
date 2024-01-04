@@ -125,7 +125,7 @@ RSpec.describe "Api::V1::Articles" do
 
       it "更新できない" do
         expect { subject }.to raise_error(ActiveRecord::RecordNotFound)
-        expect { subject }.not_to change { Article.count }
+        not_change { Article.count }.by(0)
       end
     end
   end
@@ -152,7 +152,7 @@ RSpec.describe "Api::V1::Articles" do
 
       it "記事を削除できない" do
         expect { subject }.to raise_error(ActiveRecord::RecordNotFound)
-        expect { subject }.not_to change { Article.count }
+        not_change { Article.count }.by(0)
       end
     end
   end
