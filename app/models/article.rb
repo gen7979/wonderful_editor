@@ -4,6 +4,7 @@
 #
 #  id         :bigint           not null, primary key
 #  body       :text
+#  status     :integer          default("draft"), not null
 #  title      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -27,4 +28,6 @@ class Article < ApplicationRecord
   has_many :article_likes, dependent: :destroy
   # comments
   has_many :comments, dependent: :destroy
+  # 公開非公開の設定
+  enum status: { draft: 0, published: 1 }
 end

@@ -25,3 +25,11 @@ Lint/EmptyBlock:
 #IndexedLetのチェックを無効
 RSpec/IndexedLet:
   Enabled: false
+
+#追加
+RSpec/ExampleLength:
+  Max: 10
+
+#追加
+RSpec/LetSetup:
+  Enabled: false
